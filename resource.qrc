@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/image/gif">
+        <file>E:/rocket.gif</file>
+    </qresource>
+    <qresource prefix="/image/static">
+        <file>E:/rain.jpg</file>
+        <file>E:/light.jpg</file>
+        <file>E:/simple1.jpg</file>
+    </qresource>
+</RCC>

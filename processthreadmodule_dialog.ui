@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ProcessThreadModule_Dialog</class>
+ <widget class="QDialog" name="ProcessThreadModule_Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton
+{
+	border-radius:10px;
+	border-width:2px;
+	
+	background-color: rgb(107, 236, 255);
+}
+
+QPushButton:hover{
+	
+	background-color: rgb(105, 255, 88);
+}
+
+QLabel{
+	border-width:2px;
+	border-radius:10px;
+	background-color: rgb(194, 255, 235);
+	font: 14pt &quot;华文行楷&quot;;
+}
+
+QLabel:hover{
+	
+	background-color: rgb(255, 184, 234);
+}</string>
+  </property>
+  <widget class="QWidget" name="verticalLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>1011</width>
+     <height>751</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QPushButton" name="button_PTM_return">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Maximum" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>1024</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>回到主页</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QTableWidget" name="table_ProcessList"/>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QTreeWidget" name="tree_WindowList">
+          <column>
+           <property name="text">
+            <string notr="true">1</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="table_ThreadList"/>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="table_ModuleList"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PE_Dialog</class>
+ <widget class="QDialog" name="PE_Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>859</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton
+{
+	border-radius:10px;
+	border-width:2px;
+	
+	background-color: rgb(107, 236, 255);
+}
+
+QPushButton:hover{
+	
+	background-color: rgb(105, 255, 88);
+}
+
+QLabel{
+	border-width:2px;
+	border-radius:10px;
+	background-color: rgb(194, 255, 235);
+	font: 14pt &quot;华文行楷&quot;;
+}
+
+QLabel:hover{
+	
+	background-color: rgb(255, 184, 234);
+}</string>
+  </property>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>300</y>
+     <width>1001</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="button_openFile">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>100</horstretch>
+        <verstretch>100</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>100</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>打开文件</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="line_filename"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>1001</width>
+     <height>281</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(254,207, 0);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>430</y>
+     <width>1001</width>
+     <height>411</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QTabWidget" name="tab_tools">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_fileHeader">
+       <attribute name="title">
+        <string>文件头</string>
+       </attribute>
+       <widget class="QTableWidget" name="table_fileHeader">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1001</width>
+          <height>381</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_optHeader">
+       <attribute name="title">
+        <string>可选头</string>
+       </attribute>
+       <widget class="QTableWidget" name="table_optHeader">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1001</width>
+          <height>381</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_DataDirectory">
+       <attribute name="title">
+        <string>数据目录表</string>
+       </attribute>
+       <widget class="QTableWidget" name="table_dataDirectory">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>991</width>
+          <height>381</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_segmentTable">
+       <attribute name="title">
+        <string>节区表</string>
+       </attribute>
+       <widget class="QTableWidget" name="table_sectionTable">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1001</width>
+          <height>381</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_importTable">
+       <attribute name="title">
+        <string>导入表</string>
+       </attribute>
+       <widget class="QTreeWidget" name="tree_importTable">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1001</width>
+          <height>381</height>
+         </rect>
+        </property>
+        <column>
+         <property name="text">
+          <string notr="true">1</string>
+         </property>
+        </column>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_exportTable">
+       <attribute name="title">
+        <string>导出表</string>
+       </attribute>
+       <widget class="QTableWidget" name="table_exportTable">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1001</width>
+          <height>381</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_resource">
+       <attribute name="title">
+        <string>资源列表</string>
+       </attribute>
+       <widget class="QTreeWidget" name="tree_resource">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1001</width>
+          <height>381</height>
+         </rect>
+        </property>
+        <column>
+         <property name="text">
+          <string/>
+         </property>
+        </column>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_reloc">
+       <attribute name="title">
+        <string>重定位表</string>
+       </attribute>
+       <widget class="QTreeWidget" name="tree_reloc">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1001</width>
+          <height>381</height>
+         </rect>
+        </property>
+        <column>
+         <property name="text">
+          <string/>
+         </property>
+        </column>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>TLS表</string>
+       </attribute>
+       <widget class="QTableWidget" name="table_tls">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1001</width>
+          <height>381</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>延迟导入表</string>
+       </attribute>
+       <widget class="QTreeWidget" name="tree_delayLoad">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1001</width>
+          <height>381</height>
+         </rect>
+        </property>
+        <column>
+         <property name="text">
+          <string notr="true">1</string>
+         </property>
+        </column>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
